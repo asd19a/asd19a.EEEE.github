@@ -1,0 +1,3 @@
+﻿  10.28.c
+D:\C\test_10.28.c\test_10.28.c\10.28.c(406): warning C4715: “my_strlen”: 不是所有的控件路径都返回值
+  test_10.28.c.vcxproj -> D:\C\test_10.28.c\x64\Debug\test_10.28.c.exe
