@@ -1,0 +1,4 @@
+﻿  12.16.c
+D:\C\c-code\tets_12.16.c\tets_12.16.c\12.16.c(328,2): warning C4013: “gets”未定义；假设外部返回 int
+D:\C\c-code\tets_12.16.c\tets_12.16.c\12.16.c(329,12): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  tets_12.16.c.vcxproj -> D:\C\c-code\tets_12.16.c\x64\Debug\tets_12.16.c.exe
