@@ -318,39 +318,86 @@
 
 
 
-#include <winsock.h>
 
-int main()
+//
+//int main()
+//{
+//	
+//	char a[100];
+//	int i=0, letter=0, space=0, digit=0, other=0;
+//	gets(a);
+//	int len = strlen(a);
+//	while (i<len)  
+//	{
+//		if (a[i] >= 'a' && a[i] <= 'z' || a[i] >= 'A' && a[i] <= 'Z')
+//		{
+//			letter++;
+//		}
+//		else if (a[i] >= '0' && a[i] <= '9')
+//		{
+//			digit++;
+//		}
+//		else if (a[i] == ' ')
+//		{
+//			space++;
+//		}
+//		else
+//		{
+//			other++;
+//		}
+//			
+//		i++;
+//
+//	}
+//	printf("%d%d%d%d", letter, space, other, digit);
+//	return 0;
+//}
+
+
+
+int i, letter, digit, space, other;
+void my_select(char a[], int* pb, int len)
 {
-	
-	char a[100];
-	int i=0, letter=0, space=0, digit=0, other=0;
-	gets(a);
-	int len = strlen(a);
-	while (i<len)  
+	i = 0; letter = 0; digit = 0; space = 0; other = 0;
+	while (i < len)
 	{
 		if (a[i] >= 'a' && a[i] <= 'z' || a[i] >= 'A' && a[i] <= 'Z')
 		{
 			letter++;
+			*pb = letter;
 		}
 		else if (a[i] >= '0' && a[i] <= '9')
 		{
 			digit++;
+			*(pb + 1) = digit;
 		}
 		else if (a[i] == ' ')
 		{
 			space++;
+			*(pb + 2) = space;
 		}
 		else
 		{
 			other++;
+			*(pb + 3) = other;
 		}
-			
 		i++;
-
 	}
-	printf("%d%d%d%d", letter, space, other, digit);
+}
+int main()
+{
+	char a[100];
+	int b[4] = { 0 };
+	gets(a);
+	int len = strlen(a);
+	my_select(a,b, len);
+	printf("letter\tdigit\tspace\tother\n");
+	for (i = 0; i < 4; i++)
+	{
+		printf("  %d\t", b[i]);
+	}
 	return 0;
+
 }
 
 
