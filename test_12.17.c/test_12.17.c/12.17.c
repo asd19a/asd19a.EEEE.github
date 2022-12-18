@@ -177,13 +177,56 @@
 //	printf("  %d\t  %d\t  %d\t  %d\n", letter, digit, space, other);
 //	return 0;
 //}
+//int main()
+//{
+//	int a = 0;
+//	char b = 0;
+//	scanf("%d%c", &a, &b);
+//	printf("%d\n", a);
+//	if (b == ' ')
+//		printf("1");
+//	return 0;
+//}
+
+
+
+int i, letter, digit, space, other;
+
 int main()
 {
-	int a = 0;
-	char b = 0;
-	scanf("%d%c", &a, &b);
-	printf("%d\n", a);
-	if (b == ' ')
-		printf("1");
-	return 0;
+	char c[10];
+	void Isselect(char c[]);
+	//gets(c);
+	scanf("%s", c);
+	Isselect(c);
+	printf("%d\n%d\n%d\n%d\n", letter, space, other, digit);
+}
+
+void Isselect(char c[])
+{
+	letter = 0;
+	digit = 0;
+	space = 0;
+	other = 0;
+	i = 0;
+	while (c[i] != '\0')
+	{
+		if (c[i] >= 'a' && c[i] <= 'z' || c[i] >= 'A' && c[i] <= 'Z')
+		{
+			letter++;
+		}
+		else if (c[i] >= '0' && c[i] <= '9')
+		{
+			digit++;
+		}
+		else if (c[i] == ' ')
+		{
+			space++;
+		}
+		else
+		{
+			other++;
+		}
+		i++;
+	}
 }
