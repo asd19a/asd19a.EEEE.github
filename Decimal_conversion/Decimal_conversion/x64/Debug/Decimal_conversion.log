@@ -1,0 +1,7 @@
+﻿  Decimal_conversion.c
+  test.c
+  正在生成代码...
+D:\C\c-code\Decimal_conversion\Decimal_conversion\Decimal_conversion.c(79): warning C4715: “menu2”: 不是所有的控件路径都返回值
+D:\C\c-code\Decimal_conversion\Decimal_conversion\Decimal_conversion.c(100): warning C4716: “change”: 必须返回一个值
+D:\C\c-code\Decimal_conversion\Decimal_conversion\Decimal_conversion.c(42): warning C4715: “menu1”: 不是所有的控件路径都返回值
+  Decimal_conversion.vcxproj -> D:\C\c-code\Decimal_conversion\x64\Debug\Decimal_conversion.exe
