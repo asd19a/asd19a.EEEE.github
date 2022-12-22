@@ -38,15 +38,103 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int a = 1;
+//	char* p = (char*)&a;
+//	if (*p == 1)
+//	{
+//		printf("小端\n");
+//	}
+//	else
+//		printf("大端\n");
+//	return 0;
+//}
+
+
+//数据的奇数偶数划分
+
+//打印数组
+void print(int arr[])
+{
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+void sort(int arr[])
+{
+	int i = 0,j=0,m=0;
+	int count = 0;
+	//确定奇数的个数
+	for (i = 0; i < 10; i++)
+	{
+		if (arr[i] % 2 != 0)
+			count++;
+	}
+	while (m < count)
+	{
+		for (i = m; i < 9; i=i+2)
+		{
+			if (arr[i] % 2 == 0)
+			{
+				for (j = i + 1; j < 10; j++)
+				{
+					if (arr[j] % 2 != 0)
+					{
+						int tmp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = tmp;
+						break;
+					}
+				}
+			}
+		}
+		m++;
+		if (m != count)  //最后一遍不打印
+		{
+			print(arr);
+			printf("\n");
+		}
+	}
+	//对奇数部分进行升序
+	for (i = 0; i < count - 1; i++)
+	{
+		for (j = i + 1; j < count; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				int tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	//对偶数部分进行升序
+	for (i = count; i < 9; i++)
+	{
+		for (j = i + 1; j < 10; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				int tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}
+		}
+	}
+	print(arr);
+}
+
 int main()
 {
-	int a = 1;
-	char* p = (char*)&a;
-	if (*p == 1)
+	int arr[10];
+	int i = 0, j = 0;
+	for (i = 0; i < 10; i++)
 	{
-		printf("小端\n");
+		scanf("%d", &arr[i]);
 	}
-	else
-		printf("大端\n");
+	sort(arr);
 	return 0;
 }
