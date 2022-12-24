@@ -100,61 +100,61 @@
 //	return 0;
 //}
 
-void menu()
-{
-	printf("********************************************************\n");
-	printf("*********            1.Add     2.Sub          **********\n");
-	printf("*********            3.Mul     4.Div          **********\n");
-	printf("*********                 0.exit              **********\n");
-	printf("********************************************************\n");
-
-}
-int Add(int x, int y)
-{
-	return x + y;
-}
-int Sub(int x, int y)
-{
-	return x - y;
-}
-int Mul(int x, int y)
-{
-	return x * y;
-}
-int Div(int x, int y)
-{
-	return x / y;
-}
-
-int main()
-{
-	int input = 0;
-	int (*parr[5])(int, int) = { NULL,Add,Sub,Mul,Div };
-	do
-	{
-		menu();
-		printf("请选择:>");
-		scanf("%d", &input);
-		int x = 0, y = 0, ret = 0;
-		if (input >= 1 && input <= 4)
-		{
-			printf("请输入两个操作数:>");
-			scanf("%d %d", &x, &y);
-			ret = (parr[input])(x, y);
-			printf("ret=%d\n", ret);
-		}
-		else if (input == 0)
-		{
-			printf("exit\n");
-		}
-		else
-		{
-			printf("选择错误，重新选择\n");
-		}
-	} while (input);
-
-	return 0;
-}
+//void menu()
+//{
+//	printf("********************************************************\n");
+//	printf("*********            1.Add     2.Sub          **********\n");
+//	printf("*********            3.Mul     4.Div          **********\n");
+//	printf("*********                 0.exit              **********\n");
+//	printf("********************************************************\n");
+//
+//}
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+//
+//int main()
+//{
+//	int input = 0;
+//	int (*parr[5])(int, int) = { NULL,Add,Sub,Mul,Div };
+//	do
+//	{
+//		menu();
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		int x = 0, y = 0, ret = 0;
+//		if (input >= 1 && input <= 4)
+//		{
+//			printf("请输入两个操作数:>");
+//			scanf("%d %d", &x, &y);
+//			ret = (parr[input])(x, y);
+//			printf("ret=%d\n", ret);
+//		}
+//		else if (input == 0)
+//		{
+//			printf("exit\n");
+//		}
+//		else
+//		{
+//			printf("选择错误，重新选择\n");
+//		}
+//	} while (input);
+//
+//	return 0;
+//}
 
 
 //int main()
@@ -238,4 +238,77 @@ int main()
 //	printf("add=%d\n", add);
 //	printf("sub=%d\n", sub);
 //	return 0;
+//}
+
+
+//回调函数
+
+//void menu()
+//{
+//	printf("********************************************************\n");
+//	printf("*********            1.Add     2.Sub          **********\n");
+//	printf("*********            3.Mul     4.Div          **********\n");
+//	printf("*********                 0.exit              **********\n");
+//	printf("********************************************************\n");
+//
+//}
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+//int calc(int (*pf)(int, int))
+//{
+//	int x = 0, y = 0;
+//	printf("请输入两个操作数:>");
+//	scanf("%d %d", &x, &y);
+//	return pf(x, y);
+//}
+//
+//int main()
+//{
+//	int input = 0; 
+//	int ret = 0;
+//	do
+//	{
+//		menu();
+//		printf("请选择:>");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			ret = calc(Add);
+//			printf("ret=%d\n", ret);
+//			break;
+//		case 2:
+//			ret = calc(Sub);
+//			printf("ret=%d\n", ret);
+//			break;
+//		case 3:
+//			ret = calc(Mul);
+//			printf("ret=%d\n", ret);
+//			break;
+//		case 4:
+//			ret = calc(Div);
+//			printf("ret=%d\n", ret);
+//			break;
+//		case 0:
+//			printf("exit\n");
+//		default :
+//			printf("选择错误，重新选择\n");
+//			break;
+//		}
+//	} while (input);
+//	
 //}
