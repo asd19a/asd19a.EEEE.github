@@ -1,2 +1,4 @@
 ﻿  12.26.c
+D:\C\c-code\test_12.26.c\test_12.26.c\12.26.c(92,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+D:\C\c-code\test_12.26.c\test_12.26.c\12.26.c(92,9): warning C4477: “printf”: 格式字符串“%#x”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“int *”
   test_12.26.c.vcxproj -> D:\C\c-code\test_12.26.c\Debug\test_12.26.c.exe

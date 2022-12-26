@@ -66,7 +66,7 @@ int main()
 	printf("%d\n", sizeof(&p[0] + 1));*/
 
 	//ถþฮฌสýื้
-	int a[3][4] = { 0 };
+	/*int a[3][4] = { 0 };
 	printf("%d\n", sizeof(a));
 	printf("%d\n", sizeof(a[0][0]));
 	printf("%d\n", sizeof(a[0]));
@@ -77,7 +77,7 @@ int main()
 	printf("%d\n", sizeof(&a[0] + 1));
 	printf("%d\n", sizeof(*(&a[0] + 1)));
 	printf("%d\n", sizeof(*a));
-	printf("%d\n", sizeof(a[3]));
+	printf("%d\n", sizeof(a[3]));*/
 
 
 
@@ -85,5 +85,10 @@ int main()
 	int s = 1;
 	printf("%d\n", sizeof(s = a + 7));
 	printf("s=%d\n", s);*/
+
+	int arr[4] = { 1,2,3,4 };
+	//int* p;
+	//*p = arr;
+	printf("%d\n%#x\n%p\n", arr,arr,arr);
 	return 0;
 }
