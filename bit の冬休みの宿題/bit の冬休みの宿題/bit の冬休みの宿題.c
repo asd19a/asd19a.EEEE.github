@@ -163,3 +163,68 @@
 //	}
 //	return 0;
 //}
+
+
+
+
+
+//day03
+//选择题
+
+//1.A
+//2.ABCD
+//3.C
+//4.D
+//5.D
+
+
+//编程题1:
+
+//int main()
+//{
+//	int arr[20] = { 0 };
+//	int n = 0;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int i = 0;
+//		int count = 0;
+//		double ave = 0;
+//		double sum = 0;
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//			//getchar();
+//			if (arr[i] < 0)
+//				count++;
+//			else if (arr[i] > 0)
+//			{
+//				sum = sum + arr[i];
+//			}
+//		}
+//		ave = sum / n;
+//		printf("%d %.1f\n", count, ave);
+//
+//	}
+//}
+
+
+//编程题2:
+
+ //int main()
+//{
+//	int arr[5] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		scanf("%d,", &arr[i]);
+//		
+//	}
+//	int min = arr[0];
+//	for (i = 0; i < 5; i++)
+//	{
+//		if (arr[i]<min)
+//		min = arr[i];
+//	}
+//	printf("%d\n", min);
+//	return 0;
+//}
