@@ -1,0 +1,5 @@
+﻿  1.1.c
+D:\C\c-code\test_23.1.1.c\test_23.1.1.c\1.1.c(43,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\C\c-code\test_23.1.1.c\test_23.1.1.c\1.1.c(44,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\C\c-code\test_23.1.1.c\test_23.1.1.c\1.1.c(62,2): warning C4013: “gets”未定义；假设外部返回 int
+  test_23.1.1.c.vcxproj -> D:\C\c-code\test_23.1.1.c\x64\Debug\test_23.1.1.c.exe
