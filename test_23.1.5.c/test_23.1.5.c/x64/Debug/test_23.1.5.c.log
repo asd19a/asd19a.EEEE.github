@@ -1,0 +1,3 @@
+﻿  1.5.c
+D:\C\c-code\test_23.1.5.c\test_23.1.5.c\1.5.c(86,2): warning C4013: “qsort”未定义；假设外部返回 int
+  test_23.1.5.c.vcxproj -> D:\C\c-code\test_23.1.5.c\x64\Debug\test_23.1.5.c.exe
