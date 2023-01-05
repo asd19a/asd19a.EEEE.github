@@ -1,0 +1,4 @@
+﻿  Contact.c
+D:\C\c-code\Contact.c\Contact.c\Contact.c(105,20): warning C4090: “函数”: 不同的“const”限定符
+D:\C\c-code\Contact.c\Contact.c\Contact.c(171,2): warning C4013: “qsort”未定义；假设外部返回 int
+  Contact.c.vcxproj -> D:\C\c-code\Contact.c\x64\Debug\Contact.c.exe
