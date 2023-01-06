@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 #define MAX_NAME  20
@@ -12,6 +13,9 @@
 
 
 #define MAX  1000
+
+#define DEFAULT_SZ 3
+#define INC_SZ 2
 
 
 typedef struct peocon
@@ -23,10 +27,20 @@ typedef struct peocon
 	char addr[MAX_ADDR];
 }peocon;
 
+
+//静态通讯录
+//typedef struct contact
+//{
+//	peocon data[MAX];
+//	int sz;
+//}contact;
+
+//动态通讯录
 typedef struct contact
 {
-	peocon data[MAX];
+	peocon* data;
 	int sz;
+	int capacity;
 }contact;
 
 //初始化通讯录
@@ -49,4 +63,7 @@ void modifycontact(contact* pc);
 
 //排序通讯录
 void sortcontact(contact* pc);
+
+//销毁通讯录
+void destroycontact(contact* pc);
 

@@ -30,7 +30,7 @@ int main()
 {
 	int input = 0;
 	contact con;
-	Innitcon(&con);
+	Innition(&con);
 	do
 	{
 		menu();
@@ -57,6 +57,7 @@ int main()
 			printcontact(&con);
 			break;
 		case EXIT:
+			destroycontact(&con);
 			printf("�˳�ͨѶ¼\n");
 			break;
 		default:
