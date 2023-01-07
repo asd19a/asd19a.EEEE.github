@@ -133,29 +133,68 @@
 //}
 
 
+//int main()
+//{
+//	int year = 0, month = 0;
+//	while (scanf("%d %d", &year, &month))
+//	{
+//		
+//		if (month == 2)
+//		{
+//			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+//			{
+//				printf("29\n");
+//			}
+//			else
+//			{
+//				printf("28\n");
+//			}
+//		}
+//		else if (month == 4 || month == 6 || month == 9 || month == 11)
+//		{
+//			printf("30\n");
+//		}
+//		else
+//			printf("31\n");
+//	}
+//	return 0;
+//}
+
+
+
+int cmp_int(const void* e1, const void* e2)
+{
+	return *((int*)e1) - *((int*)e2);
+}
+void print(int* arr, int sz)
+{
+	int i = 0;
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+}
+
 int main()
 {
-	int year = 0, month = 0;
-	while (scanf("%d %d", &year, &month))
+	int n = 0;
+	scanf("%d", &n);
+	int* arr = (int*)calloc(n+1, sizeof(int));
+	if (arr == NULL)
 	{
-		
-		if (month == 2)
-		{
-			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
-			{
-				printf("29\n");
-			}
-			else
-			{
-				printf("28\n");
-			}
-		}
-		else if (month == 4 || month == 6 || month == 9 || month == 11)
-		{
-			printf("30\n");
-		}
-		else
-			printf("31\n");
+		perror("main");
+		return 0;
 	}
+	int i = 0;
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+
+	scanf("%d", &arr[n]);
+	qsort(arr, n + 1, sizeof(arr[0]), cmp_int);
+	print(arr, n + 1);
+	free(arr);
+	arr = NULL;
 	return 0;
 }

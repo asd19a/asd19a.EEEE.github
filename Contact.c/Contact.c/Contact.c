@@ -9,12 +9,32 @@
 //	memset(pc->data, 0, sizeof(pc->data));
 //}
 
+void download(contact* pc)
+{
+	FILE* pf = fopen("D:\\C\\c-code\\Contact.c\\Contact.c\\contact.txt", "r");
+	if (pf == NULL)
+	{
+		perror("download");
+		return;
+	}
+	peocon tmp = { 0 };
+	while (fread(&tmp, sizeof(peocon), 1, pf))
+	{
+		checkcapacity(pc);
+		pc->data[pc->sz] = tmp;
+		pc->sz++;
+	}
+	fclose(pf);
+	pf = NULL;
+}
+
 //动态初始化
 void Innition(contact* pc)
 {
 	pc->sz = 0;
 	pc->data = (peocon*)calloc(DEFAULT_SZ, sizeof(peocon));
 	pc->capacity = DEFAULT_SZ;
+	download(pc);
 }
 
 //静态添加联系人
@@ -42,6 +62,26 @@ void Innition(contact* pc)
 //}
 
 
+void checkcapacity(contact* pc)
+{
+	if (pc->sz == pc->capacity)
+	{
+		printf("通讯录已满，开始扩容\n");
+		peocon* ptr = (peocon*)realloc(pc->data, (DEFAULT_SZ + INC_SZ) * sizeof(peocon));
+		if (ptr == NULL)
+		{
+			printf("扩容失败\n");
+			return;
+		}
+		else
+		{
+			pc->data = ptr;
+			pc->capacity += INC_SZ;
+			printf("扩容成功\n");
+		}
+	}
+}
+
 //动态添加联系人
 void addcontact(contact* pc)
 {
@@ -53,22 +93,7 @@ void addcontact(contact* pc)
 		switch (input)
 		{
 		case 1:
-			if (pc->sz == pc->capacity)
-			{
-				printf("通讯录已满，开始扩容\n");
-				peocon* ptr = (peocon*)realloc(pc->data, (DEFAULT_SZ + INC_SZ) * sizeof(peocon));
-				if (ptr == NULL)
-				{
-					printf("扩容失败\n");
-					return;
-				}
-				else
-				{
-					pc->data = ptr;
-					pc->capacity += INC_SZ;
-					printf("扩容成功\n");
-				}
-			}
+			checkcapacity(pc);
 			printf("开始添加\n");
 			printf("请输入姓名:>");
 			scanf("%s", pc->data[pc->sz].name);
@@ -340,4 +365,21 @@ void destroycontact(contact* pc)
 	pc->sz = 0;
 	pc->capacity = 0;
 
+}
+
+void savecontact(contact* pc)
+{
+	FILE* pf = fopen("D:\\C\\c-code\\Contact.c\\Contact.c\\contact.txt", "w");
+	if (pf == NULL)
+	{
+		perror("savecontact");
+		return;
+	}
+	int i = 0;
+	for (i = 0; i < pc->sz; i++)
+	{
+		fwrite(pc->data + i, sizeof(peocon), 1, pf);
+	}
+	fclose(pf);
+	pf = NULL;
 }

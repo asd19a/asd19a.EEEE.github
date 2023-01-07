@@ -67,3 +67,9 @@ void sortcontact(contact* pc);
 //销毁通讯录
 void destroycontact(contact* pc);
 
+//保存通讯录
+void savecontact(contact* pc);
+
+//增容
+void checkcapacity(contact* pc);
+

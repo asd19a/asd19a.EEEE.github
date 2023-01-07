@@ -57,6 +57,7 @@ int main()
 			printcontact(&con);
 			break;
 		case EXIT:
+			savecontact(&con);
 			destroycontact(&con);
 			printf("�˳�ͨѶ¼\n");
 			break;
