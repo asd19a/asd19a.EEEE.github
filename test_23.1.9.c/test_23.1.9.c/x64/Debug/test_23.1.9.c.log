@@ -1,0 +1,7 @@
+﻿  1.9.c
+D:\C\c-code\test_23.1.9.c\test_23.1.9.c\1.9.c(300,1): warning C4005: “max”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdlib.h(1282): message : 参见“max”的前一个定义
+D:\C\c-code\test_23.1.9.c\test_23.1.9.c\1.9.c(373,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\C\c-code\test_23.1.9.c\test_23.1.9.c\1.9.c(374,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\C\c-code\test_23.1.9.c\test_23.1.9.c\1.9.c(362): warning C4172: 返回局部变量或临时变量的地址: final
+  test_23.1.9.c.vcxproj -> D:\C\c-code\test_23.1.9.c\x64\Debug\test_23.1.9.c.exe
