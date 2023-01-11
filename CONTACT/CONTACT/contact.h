@@ -1,35 +1,37 @@
 #pragma once
 
+//所需头文件的包含
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
+//一些定义的表示大小的宏
 #define MAX_NAME 20
 #define MAX_SEX  10
 #define MAX_TEL  20
 #define MAX_ADDR 30
 
-#define DEFAULT_SZ 3
-#define INC_SZ     2
+#define DEFAULT_SZ 3  //默认通讯录容量
+#define INC_SZ     2  //每次增容的大小
 
 
 //定义每个联系人的信息
 typedef struct peoinfo
 {
-	char name[MAX_NAME];
-	int age;
-	char sex[MAX_SEX];
-	char tel[MAX_TEL];
-	char addr[MAX_ADDR];
+	char name[MAX_NAME]; //姓名
+	int age;  //年龄
+	char sex[MAX_SEX];  //性别
+	char tel[MAX_TEL];  //电话
+	char addr[MAX_ADDR];  //地址
 }peoinfo;
 
 
 //存储每个联系人
 typedef struct contact
 {
-	peoinfo* data;
-	int sz;
-	int capacity;
+	peoinfo* data;  //定义指针变量，方便后续动态内存开辟，进行通讯录扩容操作
+	int sz;     //通过下标访问数组
+	int capacity;  // 记录通讯录容量
 }contact;
 
 typedef struct sort
