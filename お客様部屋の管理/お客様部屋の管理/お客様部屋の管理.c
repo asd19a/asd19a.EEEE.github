@@ -86,11 +86,11 @@ void print(save* ph)
 
 void print2(save* ph)
 {
-	printf("%-20s\t%-20s\t%-10s\t%-10s%-10s\t%-10s\n", "▓┐╬▌╖м║┼", "IDелй`е╚", "е┴езе├епХrщg", "ЕgБ¤", "е┴езе├епевеже╚Хrщg", "е│е╣е╚");
+	printf("%-20s\t%-20s\t%-10s\t%-10s\t%-20s\t%-10s\n", "▓┐╬▌╖м║┼", "IDелй`е╚", "е┴езе├епХrщg", "ЕgБ¤", "е┴езе├епевеже╚Хrщg", "е│е╣е╚");
 	int i = 0;
 	for (i = 0; i < ph->sz2; i++)
 	{
-		printf("%-20s\t%-20s\t%-10s\t%-10s%-10s\t%-10s\n", ph->datain[i].room_num,
+		printf("%-20s\t%-20s\t%-10s\t%-10d\t%-20s\t%-10d\n", ph->datain[i].room_num,
 														   ph->datain[i].idcard,
 														   ph->datain[i].intime,
 														   ph->datain[i]._price,
