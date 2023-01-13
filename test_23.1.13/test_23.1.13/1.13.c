@@ -429,3 +429,35 @@ int* masterMind(char* solution, char* guess, int* returnSize)
 //    }
 //    return 0;
 //}
+
+
+int main()
+{
+    int n = 0;
+    int arr[100];
+    scanf("%d", &n);
+    int i = 0, j = 0, count = 0, row = 0;
+   // int tmp[100] = { 0 };
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (i = 0; i < n; i++)
+    {
+        count = 1;
+        for (j = 0; j < n; j++)
+        {
+            if (arr[j] == arr[i]&&i!=j)
+            {
+                count++;
+            }
+
+        }
+        if (count % 2 == 1)
+        {
+            printf("%d\n", arr[i]);
+            break;
+        }
+    }
+    return 0;
+}
