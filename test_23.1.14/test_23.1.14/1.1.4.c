@@ -112,9 +112,15 @@
 //}
 
 
+//int main()
+//{
+//	initgraph(1000, 600,10);
+//	//IMAGE picture;
+//
+//}
+
+
 int main()
 {
-	initgraph(1000, 600,10);
-	//IMAGE picture;
-
+	
 }

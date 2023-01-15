@@ -17,11 +17,14 @@ void download(contact* pc)
 		perror("download");
 		return;
 	}
-	peocon tmp = { 0 };
-	while (fread(&tmp, sizeof(peocon), 1, pf))
+	//peocon tmp = { 0 };
+	while ((fscanf(pf, "%s %d %s %s %s", pc->data[pc->sz].name,
+										&(pc->data[pc->sz].age),
+										pc->data[pc->sz].sex,
+										pc->data[pc->sz].tele,
+										pc->data[pc->sz].addr))<5)
 	{
 		checkcapacity(pc);
-		pc->data[pc->sz] = tmp;
 		pc->sz++;
 	}
 	fclose(pf);
@@ -378,7 +381,11 @@ void savecontact(contact* pc)
 	int i = 0;
 	for (i = 0; i < pc->sz; i++)
 	{
-		fwrite(pc->data + i, sizeof(peocon), 1, pf);
+		fprintf(pf,"%-15s\t%-5d\t%-10s\t%-20s\t%-20s\n", pc->data[i].name,
+														 pc->data[i].age,
+														 pc->data[i].sex,
+														 pc->data[i].tele,
+														 pc->data[i].addr);
 	}
 	fclose(pf);
 	pf = NULL;

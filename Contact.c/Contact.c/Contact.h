@@ -44,7 +44,7 @@ typedef struct contact
 }contact;
 
 //初始化通讯录
-void Innitcon(contact* pc);
+void Innition(contact* pc);
 
 //添加联系人
 void addcontact(contact* pc);
