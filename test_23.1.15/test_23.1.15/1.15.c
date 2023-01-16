@@ -301,3 +301,110 @@
 //{
 //
 //}
+
+//int* printNumbers(int n, int* returnSize)
+//{
+//	int i = 0;
+//	*returnSize = 0;
+//	int* arr = NULL;
+//	for (i = 1; i < pow(10, n); i++)
+//	{
+//		arr[*returnSize++] = i;
+//	}
+//	return arr;
+//}
+//
+//
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int *arr=printNumbers(n,)
+//}
+
+
+//int main()
+//{
+//	int m = 0, i = 0, j = 0, n = 0;
+//	scanf("%d", &m);
+//	int sum = 0;
+//	for (i = 1;; i=i+2)
+//	{
+//		sum = 0;
+//		for (j = i; j <= i+2 * (m - 1); j=j+2)
+//		{
+//			sum = sum + j;
+//		}
+//		if (sum == m*m*m)
+//		{
+//			break;
+//		}
+//	}
+//	int x = 0;
+//	for (x = i; x <=i+ 2 * (m - 1); x = x + 2)
+//	{
+//		if (x < i+ 2 * (m - 1))
+//		{
+//			printf("%d+", x);
+//		}
+//		else
+//			printf("%d", x);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int n = 0;
+//	int x = 2, sum = 0;
+//	scanf("%d", &n);
+//	for (; n > 0; n--, x = x + 3)
+//	{
+//		sum = sum + x;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//
+//}
+
+
+//int main()
+//{
+//	int n = 0, i = 0;
+//	int x = 0, count1 = 0, count2 = 0;
+//	float ave = 0, sum = 0;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &x);
+//		if (x < 0)
+//			count1++;
+//		else if (x > 0)
+//		{
+//			count2++;
+//			sum = sum + x;
+//		}
+//	
+//	}
+//	if (count2 != 0)
+//	{
+//		ave = sum / count2;
+//		printf("%d %.1f\n", count1, ave);
+//	}
+//	else
+//		printf("%d 0.0\n", count1);
+//	return 0;
+//}
+
+//int minNumberInRotateArray(int* rotateArray, int rotateArrayLen)
+//{
+//    int i = 0, j = 0;
+//    int min = *rotateArray;
+//    for (i = 0; i < rotateArray; i++)
+//    {
+//        if (rotateArray[i] < min)
+//            min = rotateArray[i];
+//    }
+//    return min;
+//}
