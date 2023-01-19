@@ -115,7 +115,31 @@ void Init(save* ph)
 	download(ph);
 }
 
-
+void state(save *ph)
+{
+	int input = 0;
+	do
+	{
+		printf("＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n");
+		printf("＊＊＊＊＊＊＊  1.いる　　　　2.ない　＊＊＊＊＊＊\n");
+		printf("＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n");
+		printf("選択してください:>");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			ph->dataroom[ph->sz1].state ="いる";
+			break;
+		case 2:
+			ph->dataroom[ph->sz1].state = "ない";
+			break;
+		default:
+			printf("お選択がちがいます、再入力してください\n");
+			break;
+			
+		}
+	} while (input!=1&&input!=2);
+}
 
 void addroom(save* ph)
 {
@@ -127,8 +151,9 @@ void addroom(save* ph)
 	scanf("%s", ph->dataroom[ph->sz1].tel);
 	printf("値段を入力してください：");
 	scanf("%d", &(ph->dataroom[ph->sz1].price));
-	printf("ステータスを入力してください：");
-	scanf("%s", ph->dataroom[ph->sz1].state);
+	printf("以下のオプションから部屋の状態を選択してください：\n");
+	state(ph);
+	//scanf("%s", ph->dataroom[ph->sz1].state);
 	ph->sz1++;
 	printf("追加成功\n");
 }
@@ -213,6 +238,8 @@ void searchroom(save* ph)
 void check(save* ph)
 {
 	printf("チェックを始めるところです\n");
+	//printf("部屋番号、単価は自動入力されています。以下の情報を入力してください\n");
+	//ph->datain[ph->sz2].room_num=ph->dataroom[]
 	printf("部屋番号を入力してください：");
 	scanf("%s", ph->datain[ph->sz2].room_num);
 	printf("IDカートを入力してください：");
@@ -255,6 +282,15 @@ void checkout(save* ph)
 			ph->datain[i] = ph->datain[i + 1];
 		}
 		ph->sz2--;
+		for (i = 0; i < ph->sz1; i++)
+		{
+			if (ph->dataroom[i].roomnum == num)
+			{
+				ph->dataroom[i].state= "ない";
+				break;
+			}
+		}
+		printf("最後のコストは%dもとです\n", ph->datain[pos].cost);
 		printf("チェックアウト成功\n");
 		return;
 	}

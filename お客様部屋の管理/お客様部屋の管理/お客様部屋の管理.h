@@ -8,10 +8,9 @@
 
 #define MAX_NUM  10
 #define MAX_TEL  12
-#define MAX_PRICE  10
-#define MAX_STATE  10
+#define MAX_STATE  20
 #define MAX_ID     20
-#define MAX_TIME   20
+#define MAX_TIME   30
 
 #define DEFAULT_SZ  5
 #define INC_SZ  3
@@ -23,7 +22,7 @@ typedef struct hotelroom
 	char roomnum[MAX_NUM];
 	char tel[MAX_TEL];
 	int price;
-	char state[MAX_STATE];
+	char *state;
 }roominfor;
 
 typedef struct information
