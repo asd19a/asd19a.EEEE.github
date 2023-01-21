@@ -1,5 +1,1 @@
-﻿  test.c
-D:\C\test_10.30扫雷\test_10.30扫雷\test.c(32,26): warning C4020: “Setmine”: 实参太多
-D:\C\test_10.30扫雷\test_10.30扫雷\test.c(36,33): warning C4020: “Findmine”: 实参太多
-D:\C\test_10.30扫雷\test_10.30扫雷\test.c(61,4): warning C4013: “main”未定义；假设外部返回 int
-  test_10.30扫雷.vcxproj -> D:\C\test_10.30扫雷\x64\Debug\test_10.30扫雷.exe
+﻿  test_10.30扫雷.vcxproj -> D:\C\c-code\test_10.30扫雷\x64\Debug\test_10.30扫雷.exe
