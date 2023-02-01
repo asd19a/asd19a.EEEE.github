@@ -2,7 +2,7 @@
 
 #include "game.h"
 
-void init()
+void init(int ret)
 {
 	int i = 0, j = 0;
 	for (i = 0; i < ret; i++)
@@ -14,14 +14,14 @@ void init()
 	}
 }
 
-void buzhi()
+void buzhi(int ret,int sign)
 {
 	int i = 0;
 	int x = 0, y = 0;
-	while (i < COUNT)
+	while (i < sign)
 	{
-		x = rand() % 9;
-		y = rand() % 9;
+		x = rand() % ret;
+		y = rand() % ret;
 		if (arr[x][y] == ' ')
 		{
 			arr[x][y] = '1';
@@ -31,37 +31,51 @@ void buzhi()
 	
 }
 
-void print()
+void print(int ret)
 {
 	int i = 0, j = 0;
 	printf("---------------É¨À×--------------\n");
+	printf("x/y ");
+	for (i = 1; i <= ret; i++)
+	{
+		printf(" %3d", i);
+	}
+	printf("\n");
 	for (i = 0; i < ret; i++)
 	{
+		printf(" %3d", i + 1);
 		for (j = 0; j < ret; j++)
 		{
-			printf(" %c ", tmp[i][j]);
+			printf(" %3c", tmp[i][j]);
 		}
 		printf("\n");
 	}
 	printf("---------------É¨À×--------------\n");
 }
 
-void printboard()
+void printboard(int ret)
 {
 	int i = 0, j = 0;
 	printf("---------------É¨À×--------------\n");
+	printf("x/y ");
+	for (i = 1; i <= ret; i++)
+	{
+		printf(" %3d", i);
+	}
+	printf("\n");
 	for (i = 0; i < ret; i++)
 	{
+		printf(" %3d", i + 1);
 		for (j = 0; j < ret; j++)
 		{
-			printf(" %c ", arr[i][j]);
+			printf(" %3c", arr[i][j]);
 		}
 		printf("\n");
 	}
 	printf("---------------É¨À×--------------\n");
 }
 
-void show()
+void show(int ret)
 {
 	int i = 0, j = 0;
 	//printf("---------------É¨À×--------------\n");
@@ -77,9 +91,10 @@ void show()
 }
 
 
-int souji()
+int souji(int ret,int sign)
 {
 	int x = 0, y = 0;
+	static int count = 0;
 	while (1)
 	{
 		printf("ÇëÊäÈëÒªÅÅ²éµÄ×ø±ê:>");
@@ -103,6 +118,12 @@ int souji()
 			else
 			{
 				tmp[x - 1][y - 1] = ' ';
+				count++;
+				if (ret * ret - sign == count)
+				{
+					printf("¹§Ï²Äã£¬ÅÅÀ×³É¹¦\n");
+					return 2;
+				}
 				return 0;
 			}
 		}

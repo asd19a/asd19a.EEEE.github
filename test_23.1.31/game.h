@@ -9,20 +9,22 @@
 #define ROW 100
 #define COL 100
 
-#define ret 9
+//#define ret 9
 #define COUNT 10
 
 char arr[ROW][COL];
 char tmp[ROW][COL];
 
-void init();
+void init(int ret);
 
-void buzhi();
+void buzhi(int ret,int sign);
 
-void show();
+void show(int ret);
 
-int souji();
+int souji(int ret,int sign);
 
-void print();
+void print(int ret);
 
-void printboard();
+void printboard(int ret);
+
+void makeself(int r_s[]);
