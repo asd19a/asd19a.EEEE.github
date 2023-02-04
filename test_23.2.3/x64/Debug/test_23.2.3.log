@@ -1,2 +1,5 @@
 ﻿  test.c
+D:\C\c-code\test_23.2.3\test.c(180,9): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“int”
+D:\C\c-code\test_23.2.3\test.c(180,9): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 1 冲突
+D:\C\c-code\test_23.2.3\test.c(179,9): warning C4047: “初始化”:“char **”与“char (*)[10]”的间接级别不同
   test_23.2.3.vcxproj -> D:\C\c-code\test_23.2.3\x64\Debug\test_23.2.3.exe
