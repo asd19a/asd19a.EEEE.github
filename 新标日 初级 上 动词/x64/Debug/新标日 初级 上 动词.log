@@ -1,0 +1,3 @@
+﻿  test.c
+D:\C\c-code\新标日 初级 上 动词\test.c(119,3): warning C4013: “gets”未定义；假设外部返回 int
+  新标日 初级 上 动词.vcxproj -> D:\C\c-code\新标日 初级 上 动词\x64\Debug\新标日 初级 上 动词.exe
