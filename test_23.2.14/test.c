@@ -176,3 +176,28 @@ int prim(int k)
 //	return 0;
 //
 //}
+
+void convert(int n)
+{
+	int i = 0;
+	if ((i = n / 10) != 0)
+		convert(i);
+	putchar(n % 10 + '0');
+	putchar(32);
+}
+
+int main()
+{
+	int n = 0;
+	printf("n:>");
+	scanf("%d", &n);
+	printf("result:>");
+	if (n < 0)
+	{
+		putchar('-');
+		putchar(' ');
+		n = -n;
+	}
+	convert(n);
+	return 0;
+     }
