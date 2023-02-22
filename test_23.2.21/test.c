@@ -7,30 +7,35 @@
 void testSepList()
 {
 	SepList s;
-	SepListinit(&s);
+	/*SepListinit(&s);
+	SepListpushback(&s, 1);
 	SepListpushback(&s, 2);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
-	SepListpushback(&s, 1);
+	SepListpushback(&s, 3);
 	SepListpushback(&s, 4);
+	SepListpushback(&s, 5);
+	SepListpushback(&s, 6);
+	SepListpushback(&s, 7);
+	SepListpushback(&s, 8);
+	SepListpushback(&s, 9);
 	SepListprint(&s);
-	printf("\nÎ²É¾:\n");
+	printf("Î²É¾:\n");
 	SepListpopback(&s);
 	SepListprint(&s);
-	printf("\nÍ·É¾:\n");
+	printf("Í·É¾:\n");
 	SepListpopfront(&s);
 	SepListprint(&s);
-	printf("\nÍ·²å:\n");
+	printf("Í·²å(5):\n");
 	SepListpushfront(&s, 5);
 	SepListprint(&s);
-	printf("\nÎ²²å:\n");
+	printf("Î²²å(6):\n");
 	SepListpushback(&s, 6);
 	SepListprint(&s);
-
+	SepListsearch(&s);
+	SepListmodify(&s);
+	SepListprint(&s);*/
+	SepListinit(&s);
+	SepListprint(&s);
+	SepListdestroy(&s);
 }
 
 int main()

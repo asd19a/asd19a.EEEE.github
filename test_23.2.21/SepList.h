@@ -39,3 +39,9 @@ void SepListpopback(SepList* ps);
 
 //Í·É¾
 void SepListpopfront(SepList* ps);
+
+//²éÑ¯
+void SepListsearch(SepList* ps);
+
+//ÐÞ¸Ä
+void SepListmodify(SepList* ps);
