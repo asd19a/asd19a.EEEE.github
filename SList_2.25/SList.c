@@ -46,15 +46,8 @@ void SListpushback(SLNode** pphead,SLdatatype x)
 void SListpushfront(SLNode** pphead, SLdatatype x)
 {
 	SLNode* newnode = BuySListNode(x);
-	if (*pphead == NULL)
-	{
-		*pphead = newnode;
-	}
-	else
-	{
 		newnode->next = *pphead;
 		*pphead = newnode;
-	}
 }
 
 
