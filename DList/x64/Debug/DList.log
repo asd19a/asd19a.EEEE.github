@@ -1,0 +1,7 @@
+﻿  DList.c
+  test.c
+D:\C\c-code\DList\test.c(15,2): warning C4013: “testDList1”未定义；假设外部返回 int
+  正在生成代码...
+test.obj : error LNK2019: 无法解析的外部符号 DListinit，函数 testDList 中引用了该符号
+test.obj : error LNK2019: 无法解析的外部符号 testDList1，函数 main 中引用了该符号
+D:\C\c-code\DList\x64\Debug\DList.exe : fatal error LNK1120: 2 个无法解析的外部命令
