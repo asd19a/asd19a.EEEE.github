@@ -35,9 +35,49 @@
 //	return 0;
 //}
 
-int main()
-{
-	printf("%d\n", 3 / 4);
-	printf("%f\n", 3.0 / 4);
-	return 0;
-}
+//int main()
+//{
+//	printf("%d\n", 3 / 4);
+//	printf("%f\n", 3.0 / 4);
+//	printf("%d\n", 3 / 2);
+//	return 0;
+//}
+
+
+//int f(int n)
+//{
+//	int c;
+//	if (n == 1)
+//		c = 10;
+//	else
+//		c = f(n - 1) + 3;
+//	printf("%d\n", c);
+//	return c;
+//}
+//
+//int main()
+//{
+//	f(3);
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i, j, t, m;
+//	scanf("%d", &t);
+//	if (t < 0)
+//		t = -t;
+//	for (j = 2, m = t; j <= t; j++)
+//	{
+//		while (m % j == 0)
+//		{
+//			printf("%d ", j);
+//			m = m / j;
+//		}
+//		if (m == 1)
+//			break;
+//		printf("\n");
+//	}
+//	return 0;
+//}
