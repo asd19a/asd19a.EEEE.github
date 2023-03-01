@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\C\c-code\test_23.2.28\test.c(67,6): warning C4101: “i”: 未引用的局部变量
   test_23.2.28.vcxproj -> D:\C\c-code\test_23.2.28\x64\Debug\test_23.2.28.exe

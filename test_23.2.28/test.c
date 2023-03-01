@@ -81,3 +81,16 @@
 //	}
 //	return 0;
 //}
+
+
+int main()
+{
+	char a, b, c, d;
+	scanf("%c%c", &a, &b);
+	c = getchar();
+	d = getchar();
+
+	putchar(c);
+	putchar(d);
+	return 0;
+}
