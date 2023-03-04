@@ -1,0 +1,12 @@
+﻿  test.c
+test.obj : error LNK2005: Buynewnode 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListerase 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListinsert 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListpopback 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListpopfront 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListprint 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListpushback 已经在 SList.obj 中定义
+test.obj : error LNK2005: SListpushfront 已经在 SList.obj 中定义
+test.obj : error LNK2005: find 已经在 SList.obj 中定义
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+D:\C\c-code\test_23.3.4\x64\Debug\test_23.3.4.exe : fatal error LNK1120: 1 个无法解析的外部命令
