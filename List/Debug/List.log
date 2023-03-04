@@ -1,0 +1,6 @@
+﻿  List.c
+D:\C\c-code\List\List.c(62,28): warning C4047: “函数”:“Ldatatype”与“ListNode *”的间接级别不同
+D:\C\c-code\List\List.c(62,21): warning C4024: “Listinsert”: 形参和实参 2 的类型不同
+  test.c
+  正在生成代码...
+  List.vcxproj -> D:\C\c-code\List\Debug\List.exe
